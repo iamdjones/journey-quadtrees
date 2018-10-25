@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <StackPanel>
-        <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Generate Image" Command="{Binding GenerateImageCommand}"/>
             <TextBox Text="{Binding BlueFormula}" />
             <TextBox Text="{Binding GreenFormula}" />
             <TextBox Text="{Binding RedFormula}" />

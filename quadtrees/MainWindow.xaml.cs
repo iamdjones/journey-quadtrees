@@ -40,7 +40,7 @@ namespace quadtrees
 
         private async void image_Loaded(object sender, RoutedEventArgs e)
         {
-            for(var x = 0; x < image.Width; x++)
+            for (var x = 0; x < image.Width; x++)
             {
                 for (var y = 0; y < image.Height; y++)
                 {
@@ -61,10 +61,10 @@ namespace quadtrees
         {
             var vars = new PixelColorVariables { x = x, y = y };
             return new byte[] {
-                (byte)await CSharpScript.EvaluateAsync<int>(viewModel.GreenFormula, globals: vars),
-                (byte)await CSharpScript.EvaluateAsync<int>(viewModel.BlueFormula, globals: vars),
-                (byte)await CSharpScript.EvaluateAsync<int>(viewModel.RedFormula, globals: vars),
-                (byte)await CSharpScript.EvaluateAsync<int>(viewModel.AlphaFormula, globals: vars),
+                (byte)await viewModel.GreenScript(vars),
+                (byte)await viewModel.BlueScript(vars),
+                (byte)await viewModel.RedScript(vars),
+                (byte)await viewModel.AlphaScript(vars)
             };
         }
 
