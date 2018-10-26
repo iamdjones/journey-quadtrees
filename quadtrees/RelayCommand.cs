@@ -11,7 +11,7 @@ namespace quadtrees
     {
         private Action _action;
         private bool _canExecute;
-        public CommandHandler(Action action, bool canExecute)
+        public RelayCommand(Action action, bool canExecute)
         {
             _action = action;
             _canExecute = canExecute;

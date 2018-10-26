@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:quadtrees"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <StackPanel Orientation="Horizontal">
             <Button Content="Generate Image" Command="{Binding GenerateImageCommand}"/>
@@ -13,7 +13,8 @@
             <TextBox Text="{Binding GreenFormula}" />
             <TextBox Text="{Binding RedFormula}" />
             <TextBox Text="{Binding AlphaFormula}" />
+            <TextBlock Text="{Binding ImageStatus}"/>
         </StackPanel>
-        <Image Name="image" Height="450" Width="800" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="image_Loaded"/>
+        <Image Name="image" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="{Binding Image}"/>
     </StackPanel>
 </Window>
